@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NR Relife Foundation - Rehabilitation Center</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins for headings, Roboto for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-roboto text-gray-700 bg-gray-50 overflow-x-hidden">
+
+    <!-- Top Bar -->
+    <div class="top-bar bg-red-600 text-white text-sm py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center z-50 relative">
+        <div class="flex items-center text-center md:text-left mb-2 md:mb-0">
+            <p class="flex items-center whitespace-nowrap overflow-hidden text-ellipsis">
+                <i class="fas fa-bullhorn text-yellow-400 mr-2"></i> Your journey to recovery starts here.
+            </p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end items-center space-x-4 md:space-x-6">
+            <a href="tel:+919611464484" class="text-white hover:text-yellow-400 flex items-center whitespace-nowrap">
+                <i class="fas fa-phone-alt mr-1"></i> +91 9611464484
+            </a>
+            <a href="mailto:nrrelife1986@gmail.com" class="text-white hover:text-yellow-400 flex items-center whitespace-nowrap">
+                <i class="fas fa-envelope mr-1"></i> nrrelife1986@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header id="main-header" class="fixed w-full bg-white shadow-md z-40 transition-all duration-300 ease-in-out py-3">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="#home" class="logo flex items-center">
+                <img src="NR relife foundation\logo.png" alt="NR Relife Foundation Logo" class="h-16 md:h-20 transition-all duration-300 ease-in-out">
+            </a>
+            <nav id="main-nav" class="hidden md:flex space-x-6 lg:space-x-8 font-poppins font-medium text-gray-700">
+                <a href="#home" class="hover:text-green-600 relative group">Home<span class="nav-underline"></span></a>
+                <a href="#about" class="hover:text-green-600 relative group">About Us<span class="nav-underline"></span></a>
+                <a href="#treatments" class="hover:text-green-600 relative group">Treatments<span class="nav-underline"></span></a>
+                <a href="#gallery" class="hover:text-green-600 relative group">Gallery<span class="nav-underline"></span></a>
+                <a href="#testimonials" class="hover:text-green-600 relative group">Testimonials<span class="nav-underline"></span></a>
+                <a href="#faq" class="hover:text-green-600 relative group">FAQ<span class="nav-underline"></span></a>
+                <a href="#contact" class="hover:text-green-600 relative group">Contact<span class="nav-underline"></span></a>
+            </nav>
+            <div class="header-actions flex items-center space-x-4">
+                <a href="tel:+919611464484" class="hidden md:block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300">24x7 Helpline</a>
+                <a href="https://forms.gle/cikn4BQ6HeXK8pyV9" target="_blank" class="hidden md:block border border-gray-600 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">Enquire Now</a>
+                <button id="nav-toggle" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform translate-x-full">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-700 text-3xl focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="flex flex-col space-y-6 text-2xl font-poppins text-gray-800">
+            <a href="#home" class="hover:text-green-600">Home</a>
+            <a href="#about" class="hover:text-green-600">About Us</a>
+            <a href="#treatments" class="hover:text-green-600">Treatments</a>
+            <a href="#gallery" class="hover:text-green-600">Gallery</a>
+            <a href="#testimonials" class="hover:text-green-600">Testimonials</a>
+            <a href="#faq" class="hover:text-green-600">FAQ</a>
+            <a href="#contact" class="hover:text-green-600">Contact</a>
+            <a href="tel:+919611464484" class="bg-orange-500 text-white px-6 py-3 rounded-lg text-lg text-center mt-6">24x7 Helpline</a>
+            <a href="https://forms.gle/cikn4BQ6HeXK8pyV9" target="_blank" class="border border-gray-600 text-gray-600 px-6 py-3 rounded-lg text-lg text-center">Enquire Now</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section relative w-full h-screen flex items-center justify-center text-center text-white overflow-hidden pt-32">
+            <img src="rehab.png" alt="Best Rehab in Karnataka" class="absolute inset-0 w-full h-full object-cover z-0">
+            <div class="absolute inset-0 bg-blue-900 opacity-20 z-10"></div>
+            <div class="relative z-20 max-w-4xl px-4">
+                <h1 class="text-5xl md:text-6xl font-bold font-poppins mb-4 leading-tight">Best Rehab in Karnataka</h1>
+                <p class="text-xl md:text-2xl font-roboto mb-8">Transforming Lives Through Compassionate Care</p>
+                <a href="#treatments" class="btn bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors duration-300">Learn More</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">About NR Relife Foundation</h2>
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 mt-12">
+                    <div class="lg:w-1/2">
+                        <img src="NR relife foundation\gallery14.jpg" alt="About NR Relife Foundation" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            NR ReLife Foundation is a dedicated rehabilitation and recovery center committed to helping individuals overcome addiction and mental health challenges. Our mission is to provide a safe, supportive, and structured environment where individuals struggling with substance abuse, behavioral addictions, and psychological disorders can heal and rebuild their lives.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            At NR ReLife Foundation, we believe that recovery is a journey that requires holistic care. Our approach combines medical detox, therapy, counseling, and wellness programs to ensure a long-lasting and sustainable recovery. We focus on addressing the root causes of addiction and mental health issues through personalized treatment plans that cater to the unique needs of each individual.
+                        </p>
+                        <a href="#contact" class="inline-block bg-blue-800 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-900 transition-colors duration-300 mt-4">Contact Us to Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatments Offered Section -->
+<section id="treatments" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">Treatments Offered</h2>
+                <p class="text-center text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">We offer personalized and evidence-based treatments designed to address addiction/disorder and promote lasting recovery.</p>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="alcohol.png" alt="Alcohol Addiction Treatment" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Alcohol Addiction</h3>
+                            <p class="text-base font-roboto">Our program includes medical detox, therapy, and relapse prevention strategies.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="NR relife foundation/drug.jpg" alt="Drug Addiction Treatment" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Drug Addiction</h3>
+                            <p class="text-base font-roboto">Comprehensive drug detox and rehabilitation programs for substance abuse.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="NR relife foundation\stress.jpg" alt="Anxiety and Stress Management Therapy" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Anxiety & Stress Management</h3>
+                            <p class="text-base font-roboto">Therapy and coping techniques to help individuals manage anxiety and stress.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="sex.png" alt="Sexual Addiction Recovery Program" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Sexual Addiction Recovery</h3>
+                            <p class="text-base font-roboto">Confidential therapy for compulsive sexual behavior and behavior modification.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="NR relife foundation\cigrette.jpg" alt="Tobacco and Nicotine De-addiction" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Tobacco & Nicotine De-addiction</h3>
+                            <p class="text-base font-roboto">Medical support, nicotine replacement therapy, and counseling for quitting tobacco.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-card relative bg-white rounded-xl shadow-lg overflow-hidden group h-72">
+                        <img src="injection.png" alt="Injectable Drug Addiction Treatment" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="treatment-info-overlay absolute inset-x-0 bottom-0 bg-blue-800 bg-opacity-90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                            <h3 class="text-2xl font-poppins font-semibold mb-2">Injectable Drug Addiction</h3>
+                            <p class="text-base font-roboto">Medical detox, harm reduction, and behavioral therapy for injectable drug misuse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">Gallery</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">Explore our gallery to see the facilities and environment at NR Relife Foundation.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+                    <img src="NR relife foundation\gallery5.jpg" alt="Gallery Image 1" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery9.jpg" alt="Gallery Image 2" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery19.jpg" alt="Gallery Image 3" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery4.jpg" alt="Gallery Image 4" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery11.jpg" alt="Gallery Image 5" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery7.jpg" alt="Gallery Image 6" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery8.jpg" alt="Gallery Image 7" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="NR relife foundation\gallery13.jpg" alt="Gallery Image 8" class="w-full h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                </div>
+                <!-- Removed "View More Photos" button -->
+            </div>
+        </section>
+
+        <!-- Facilities Section (Removed) -->
+        <!-- <section id="facilities" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">Our Facilities</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">We provide a serene and supportive environment with state-of-the-art amenities to foster healing and recovery.</p>
+                <div class="flex flex-col md:flex-row justify-center md:justify-between items-start mt-12 space-y-8 md:space-y-0 md:space-x-12">
+                    <ul class="facilities-list list-disc list-inside text-lg text-gray-700 space-y-3 md:w-1/2">
+                        <li>Over 10,000 sq.ft of Space</li>
+                        <li>5 Master Suites with walk-in wardrobes, attached toilets, TV, Internet, Seating Areas etc.</li>
+                        <li>Yoga and Workout Areas</li>
+                        <li>Private Counselling Areas</li>
+                        <li>Meditation Areas</li>
+                        <li>Ping Pong Table</li>
+                        <li>Nutritional Assessment / Appointment</li>
+                    </ul>
+                    <ul class="facilities-list list-disc list-inside text-lg text-gray-700 space-y-3 md:w-1/2">
+                        <li>Sound healing</li>
+                        <li>A Trained Chef (ex-Sofitel Hotel, Mumbai) for Balanced Diets</li>
+                        <li>Private Security</li>
+                        <li>CCTVs</li>
+                        <li>Board Games</li>
+                        <li>Art Classes</li>
+                        <li>Music Classes</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">What Our Patients Say</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">Hear directly from individuals whose lives have been transformed at NR Relife Foundation.</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="testimonial-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center">
+                        <img src="https://placehold.co/80x80/e0f2f7/0056b3?text=P1" alt="Patient 1" class="w-20 h-20 rounded-full object-cover mb-4">
+                        <div class="text-yellow-400 text-lg mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-700 text-base italic leading-relaxed">"The comprehensive care and unwavering support at NR Relife Foundation truly changed my life. I found my path to lasting recovery here."</p>
+                        <h3 class="mt-4 font-poppins font-semibold text-blue-800 text-xl">Kiran</h3>
+                        <p class="text-sm text-gray-500">Former Patient</p>
+                    </div>
+                    <div class="testimonial-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center">
+                        <img src="https://placehold.co/80x80/e0f2f7/0056b3?text=P2" alt="Patient 2" class="w-20 h-20 rounded-full object-cover mb-4">
+                        <div class="text-yellow-400 text-lg mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-base italic leading-relaxed">"The compassionate team and state-of-the-art facilities made my journey to mental wellness so much smoother. I'm grateful for their dedication."</p>
+                        <h3 class="mt-4 font-poppins font-semibold text-blue-800 text-xl">Mani Kumar</h3>
+                        <p class="text-sm text-gray-500">Recovered Individual</p>
+                    </div>
+                    <div class="testimonial-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col items-center">
+                        <img src="https://placehold.co/80x80/e0f2f7/0056b3?text=P3" alt="Patient 3" class="w-20 h-20 rounded-full object-cover mb-4">
+                        <div class="text-yellow-400 text-lg mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-700 text-base italic leading-relaxed">"Choosing NR Relife Foundation was the best decision for my recovery. The personalized approach and holistic therapies truly work wonders."</p>
+                        <h3 class="mt-4 font-poppins font-semibold text-blue-800 text-xl">Manoj</h3>
+                        <p class="text-sm text-gray-500">Satisfied Client</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+       <section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">Frequently Asked Questions</h2>
+        <p class="text-center text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed mb-12">Find answers to common questions about our rehabilitation programs, facilities, and approach to recovery.</p>
+
+        <div class="faq-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span>Is the program a compulsory 3-month course?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>Yes, our rehabilitation program is a compulsory 3-month residential course designed to ensure lasting recovery through structured support, therapy, and habit transformation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mt-4">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span> Do you offer meditation and spiritual support?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>Absolutely. We offer daily meditation sessions and spiritual guidance, including preaching classes led by experienced coaches to promote inner healing and mental peace.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mt-4">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span>What kind of environment is the center located in?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>Our center is situated in a peaceful, nature-rich environment, away from distractions — ideal for healing, reflection, and complete focus on recovery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span>Do you accept all types of addiction cases?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>Yes, we accept individuals struggling with all forms of addiction, including alcohol, drugs, smoking, and behavioral dependencies. Each individual receives a personalized recovery plan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mt-4">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span>Are the sessions conducted by professionals?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>Yes, our team includes qualified counselors, de-addiction experts, and spiritual mentors with years of experience in recovery and mental health care.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mt-4">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left text-xl font-semibold font-poppins text-gray-800 p-6 focus:outline-none">
+                        <span>What facilities and activities are offered during the program?</span>
+                        <i class="fas fa-plus text-blue-600 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0 text-gray-700 text-lg leading-relaxed">
+                        <p>We provide a holistic approach that includes: Medical support (if needed),Meditation & yoga,One-on-one counseling,Group therapy,Healthy meals,Skill-building and recreational activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-poppins font-semibold text-blue-800 mb-4 relative section-title">Contact Us</h2>
+                <p class="text-center text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">We'd love to hear from you. Reach out with any inquiries or to learn more about our work.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                    <!-- Contact Details Card -->
+                    <div class="contact-details-card bg-white rounded-xl shadow-lg p-8 flex flex-col justify-center">
+                        <h3 class="text-3xl font-poppins font-semibold text-blue-800 mb-6 text-center">Get in Touch</h3>
+                        <p class="flex items-start text-lg text-gray-700 mb-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl mr-4 mt-1 flex-shrink-0"></i>
+                            NR Relife Foundation, No 51, Sarjapura Road, Handhenahalli, Sarjapura, Bangalore - 562125
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700 mb-4">
+                            <i class="fas fa-phone-alt text-blue-600 text-xl mr-4"></i>
+                            +91 9611464484
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700 mb-4">
+                            <i class="fas fa-envelope text-blue-600 text-xl mr-4"></i>
+                            <a href="mailto:nrrelife1986@gmail.com" class="text-blue-600 hover:underline">nrrelife1986@gmail.com</a>
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700">
+                            <i class="fas fa-globe text-blue-600 text-xl mr-4"></i>
+                            <a href="https://www.nrrelifetrust.org" target="_blank" class="text-blue-600 hover:underline">www.nrrelifetrust.org</a>
+                        </p>
+                    </div>
+
+                    <!-- Google Map Embed -->
+                    <div class="map-container-card rounded-xl shadow-lg overflow-hidden min-h-[350px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.390559795697!2d77.78505507508383!3d12.879796887413628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae730fda9feacd%3A0x5bb6471b4702f26d!2sNR%20Re%20Life%20Foundation!5e0!3m2!1sen!2sin!4v1721385800000!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+<div class="contact-form-container bg-white rounded-xl shadow-lg mt-12 max-w-3xl mx-auto overflow-hidden">
+    <div class="p-6 md:p-8">
+        <h3 class="text-3xl font-poppins font-semibold text-blue-800 mb-6 text-center">Send Us a Message</h3>
+        
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfisiMqHnBQSjRNK_BWjS7Qk5GbIOXh3xnFog7R3nVSN9HqtQ/viewform?embedded=true" 
+            width="100%" 
+            height="954" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+            Loading…
+        </iframe>
+    </div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="footer-col">
+                <h4 class="text-xl font-poppins font-semibold mb-6">NR Relife Foundation</h4>
+                <p class="text-gray-400 leading-relaxed mb-4">Dedicated to transforming lives through compassionate care and comprehensive rehabilitation programs.</p>
+                <div class="social-icons flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="text-xl font-poppins font-semibold mb-6">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                    <li><a href="#treatments" class="text-gray-400 hover:text-white transition-colors duration-300">Treatments</a></li>
+                    <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="text-xl font-poppins font-semibold mb-6">Contact Info</h4>
+                <p class="text-gray-400 leading-relaxed mb-3 flex items-start">
+                    <i class="fas fa-map-marker-alt text-blue-400 mr-3 mt-1 flex-shrink-0"></i>
+                    #54/1 Sollepura, Handenahalli Main Road, Sarjapura, Bengaluru 562125, Karnataka, India
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-3 flex items-center">
+                    <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                    +91 9611464484
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-3 flex items-center">
+                    <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                    <a href="mailto:nrrelife1986@gmail.com" class="text-gray-400 hover:underline">nrrelife1986@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="text-xl font-poppins font-semibold mb-6">Newsletter</h4>
+                <p class="text-gray-400 leading-relaxed mb-4">Stay updated with our latest news and events.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your Email" class="p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="btn bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 NR Relife Foundation. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-gray-500 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

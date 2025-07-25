@@ -1,0 +1,422 @@
+/* Custom CSS for NR Relife Foundation (using Tailwind's utility-first approach) */
+
+/* Base Styles & Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* Define custom properties for colors and fonts for consistency and easy changes */
+:root {
+    --color-primary-blue: #0056b3; /* Veda's primary blue */
+    --color-secondary-green: #78b73d; /* Veda's primary green */
+    --color-red-accent: #da291c; /* Veda's red accent */
+    --color-orange-accent: #e27730; /* Veda's orange accent */
+
+    --font-poppins: 'Poppins', sans-serif; /* Similar to Oswald/Marcellus for headings */
+    --font-roboto: 'Roboto', sans-serif; /* Similar to Lato/Roboto for body */
+}
+
+/* Apply base font styles */
+body {
+    font-family: var(--font-roboto);
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+    color: var(--color-primary-blue);
+}
+
+/* Section Titles with Underline Effect */
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 40px; /* Space below title */
+    text-align: center; /* Ensure default is center for section titles */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secondary-green);
+    margin: 10px auto 0 auto; /* Center the underline */
+    border-radius: 2px;
+}
+
+/* Align underline to left for left-aligned titles (e.g., in FAQ if desired) */
+.section-title.text-left::after {
+    margin: 10px 0 0 0;
+}
+
+/* Header/Navbar Styling */
+#main-header {
+    top: 40px; /* Initial position below top-bar */
+    height: 90px; /* Initial height */
+}
+
+#main-header.scrolled {
+    top: 0; /* Moves to top when scrolled */
+    height: 70px; /* Shrinks when scrolled */
+}
+
+#main-header.scrolled .logo img {
+    height: 60px; /* Shrink logo when scrolled */
+}
+
+.logo img {
+    height: 80px; /* Default logo height */
+    transition: height 0.3s ease-in-out;
+}
+
+/* Navigation Links - Underline on Hover */
+#main-nav a {
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 5px; /* Space for underline */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+#main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+    transition: width 0.3s ease-in-out;
+}
+
+#main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: calc(40px + 90px); /* top-bar-height + header-height-desktop */
+}
+
+/* Treatment Cards (Flip Effect) */
+/* Treatment Cards (Flip Effect) - REVISED STYLES for robust flip */
+
+/* Treatment Cards (Slide-up Overlay Effect) - NEW PROFESSIONAL STYLES */
+.treatment-card {
+    position: relative; /* Needed for absolute positioning of overlay */
+    overflow: hidden; /* Ensures overlay slides up/down cleanly within the card borders */
+    cursor: pointer; /* Indicates interactivity */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+    /* Height is set by Tailwind's h-72 class on the HTML element */
+}
+
+.treatment-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* More prominent shadow on hover */
+}
+
+/* Style for the background image div */
+.treatment-card .absolute.inset-0 {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth image effects */
+}
+
+.treatment-card:hover .absolute.inset-0 {
+    transform: scale(1.05); /* Slight zoom effect on image when hovered */
+    filter: brightness(0.8); /* Slightly darken image on hover to make text pop */
+}
+
+/* Styles for the content overlay that slides up */
+.treatment-info-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically within the overlay */
+    align-items: center; /* Center content horizontally within the overlay */
+    text-align: center;
+    /* The core slide effect is managed by Tailwind classes in HTML:
+       - absolute inset-x-0 bottom-0 (positions it at the bottom, full width)
+       - bg-blue-800 bg-opacity-90 text-white p-6 (background, text color, padding)
+       - transform translate-y-full (initially off-screen below the card)
+       - group-hover:translate-y-0 (slides up on hover)
+       - transition-transform duration-300 ease-in-out (smooth animation)
+    */
+    z-index: 10; /* Ensure overlay is above the background image */
+}
+
+.treatment-info-overlay h3 {
+    color: white; /* Ensure heading is white */
+    margin-bottom: 0.5rem; /* Small gap between title and body text */
+}
+
+.treatment-info-overlay p {
+    color: #e0e7ff; /* Slightly off-white for body text for better contrast */
+}
+/* Gallery Images */
+#gallery img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.testimonial-card img {
+    border: 3px solid var(--color-primary-blue); /* Blue border for profile pics */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.testimonial-card p {
+    font-style: italic;
+}
+
+/* FAQ Accordion - NEW STYLES */
+.faq-item {
+    transition: all 0.3s ease-in-out; /* Smooth transition for background, border, shadow */
+}
+
+.faq-item.active {
+    background-color: #e0f2f7; /* Lighter background when active (light blue) */
+    border-color: var(--color-primary-blue); /* Blue border when active */
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1); /* Subtle shadow when active */
+}
+
+.faq-item .faq-toggle {
+    cursor: pointer;
+}
+
+.faq-item .faq-toggle .fa-plus {
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item.active .faq-toggle .fa-plus {
+    transform: rotate(45deg); /* Change plus to cross */
+}
+.faq-item.active .faq-toggle .fa-minus {
+    transform: rotate(0deg); /* Ensure minus icon doesn't rotate further if already minus */
+}
+
+
+.faq-item .faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding-top: 0; /* Ensure no top padding when collapsed */
+    padding-bottom: 0; /* Ensure no bottom padding when collapsed */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Arbitrary large value, adjusted by JS for exact scrollHeight */
+    opacity: 1;
+    padding-top: 1.5rem; /* Consistent padding (p-6) */
+    padding-bottom: 1.5rem; /* Consistent padding (p-6) */
+}
+
+
+/* Contact Form */
+.contact-form input, .contact-form textarea {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+/* Footer */
+footer .footer-col a {
+    transition: color 0.3s ease;
+}
+footer .footer-col a:hover {
+    color: var(--color-secondary-green);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 1rem;
+    }
+    .top-bar .contact-links {
+        margin-top: 8px;
+        flex-direction: column;
+        align-items: center;
+        /* Tailwind's space-x-0 and space-y-1 equivalent */
+        & > *:not(:first-child) {
+            margin-left: 0 !important;
+            margin-top: 0.25rem; /* Equivalent to space-y-1 */
+        }
+    }
+    .top-bar .contact-links a {
+        margin-left: 0 !important; /* Override desktop margin */
+    }
+
+    #main-header {
+        height: 70px; /* Fixed mobile header height */
+        padding-top: 0;
+        top: 0; /* Always stick to top */
+    }
+    #main-header.scrolled {
+        height: 70px; /* Keep same height when scrolled on mobile */
+    }
+    #main-header .logo img {
+        height: 50px; /* Smaller logo on mobile */
+    }
+    #main-header.scrolled .logo img {
+        height: 50px; /* Keep same size when scrolled */
+    }
+
+    /* Mobile Navigation Overlay */
+    #mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 50;
+    }
+    #mobile-menu-overlay.translate-x-0 {
+        transform: translateX(0);
+    }
+    #mobile-menu-overlay nav a {
+        font-size: 1.5rem;
+        padding: 10px 0;
+        color: var(--color-primary-blue);
+    }
+    #mobile-menu-overlay nav a::after {
+        background-color: var(--color-secondary-green);
+    }
+
+    .hero-section {
+        padding-top: 70px; /* Adjust for mobile header height */
+        height: 70vh; /* Shorter hero on mobile */
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+    .section-description {
+        font-size: 1rem;
+    }
+
+    /* FAQ Specific Mobile Adjustments */
+    .faq-toggle span {
+        font-size: 1.125rem; /* Slightly smaller font for mobile FAQ questions */
+    }
+    .faq-answer p {
+        font-size: 1rem; /* Slightly smaller font for mobile FAQ answers */
+    }
+    .faq-item .faq-toggle {
+        padding: 1.25rem; /* Slightly reduced padding */
+    }
+    .faq-item .faq-answer {
+        padding: 1.25rem; /* Slightly reduced padding */
+    }
+
+    .contact-details-card {
+        padding: 2rem;
+    }
+    .contact-details-card h3 {
+        font-size: 2rem;
+    }
+    .contact-details-card p {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-details-card i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+    .contact-form h3 {
+        font-size: 2rem;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+    .footer-col .social-icons {
+        justify-content: center;
+    }
+    .footer-bottom .container {
+        flex-direction: column;
+    }
+    .footer-bottom .privacy-terms {
+        margin-top: 1rem;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Tailwind's space-y-2 equivalent */
+        & > *:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+    }
+    .footer-bottom .privacy-terms a {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        font-size: 0.8em;
+    }
+    .top-bar .contact-links a {
+        font-size: 0.8em;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.75rem;
+    }
+    .section-description {
+        font-size: 0.9rem;
+    }
+    .treatment-card .treatment-front h3 {
+        font-size: 1.25rem;
+    }
+    .treatment-card .treatment-back p {
+        font-size: 0.9rem;
+    }
+    /* FAQ Specific Smallest Mobile Adjustments */
+    .faq-toggle span {
+        font-size: 1rem;
+    }
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+    .faq-item .faq-toggle {
+        padding: 1rem;
+    }
+    .faq-item .faq-answer {
+        padding: 1rem;
+    }
+    .testimonial-card p {
+        font-size: 0.8rem;
+    }
+}
